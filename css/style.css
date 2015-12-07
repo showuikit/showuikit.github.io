@@ -234,9 +234,6 @@ a {
 .comp .op a {
 	text-decoration: none;
 }
-.comp .op a:active {
-	color: blue;
-}
 a.action-fire {
 	background-color: #c44d58;
 	color: #fff;
