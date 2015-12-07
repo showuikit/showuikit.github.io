@@ -80,7 +80,7 @@ a {
 .menu .slave li {
 	cursor: pointer;
 	display: inline-block;
-	padding: 12px;
+	padding: 14px;
 	padding-bottom: 6px;
 	font-size: 12px;
 }
@@ -137,8 +137,8 @@ a {
 .info.like {
 	color: #c44d58;
 }
-.info :before {
-	font-size: 16px;
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+	margin-left: 10px;
 }
 .master .active {
 	background-image: url(../img/totop.png);
@@ -234,6 +234,9 @@ a {
 .comp .op a {
 	text-decoration: none;
 }
+.comp .op a:active {
+	color: blue;
+}
 a.action-fire {
 	background-color: #c44d58;
 	color: #fff;
@@ -295,6 +298,12 @@ p {
 .clr {
 	clear: both;
 }
+.titledoc:before {
+    display: block;
+    content: "";
+    height: 120px;
+    margin: -120px 0 0;
+}
 @media screen and (min-width: 470px) {
 	.menu a.more1 {
 		display: inline-block;
@@ -341,7 +350,7 @@ p {
 		margin-left: 20px;
 	}
 	.menu .slave li {
-		padding: 12px;
+		padding: 14px;
 		padding-bottom: 6px;
 	}
 	.logo {
