@@ -185,6 +185,7 @@ a {
     border-radius: 6px;
     color: #3c4751;
     padding: 12px;
+    display: none;
 }
 .menuMobile li {
 	margin: 10px;
@@ -300,6 +301,11 @@ p {
     content: "";
     height: 120px;
     margin: -120px 0 0;
+}
+@media screen and (max-width: 469px) {
+	.menuMobile {
+		display: block;
+	}
 }
 @media screen and (min-width: 470px) {
 	.menu a.more1 {
