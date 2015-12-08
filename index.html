@@ -53,84 +53,19 @@
 		</div>
 	</div>
 	<div class="list">
-		<div class="kit">
-			<a href="showuikit-max-dark.html">
-				<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			</a>
-			<a href="showuikit-max-dark.html">
-				<h1 class="title">Max Dark 1</h1>	
-			</a>
-			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
-			</div>
-		</div>
 
 
-		<div class="kit">
-			<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			<h1 class="title">Max Dark 2</h1>	
+		<div class="kit" ng-repeat="kit in kits">
+			<a href="{{kit.link}}">
+				<img ng-src="img/{{kit.image}}" alt="{{kit.name}}">
+			</a>
+			<a href="{{kit.link}}">
+				<h1 class="title" ng-bind="kit.name"></h1>	
+			</a>
 			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
-			</div>
-		</div>
-		<div class="kit">
-			<div class="new"><div class="mark">NOVO</div><div class="corner"></div></div>
-			<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			<h1 class="title">Max Dark</h1>	
-			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
-			</div>
-		</div>
-		<div class="kit">
-			<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			<h1 class="title">Max Dark</h1>	
-			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
-			</div>
-		</div>
-		<div class="kit">
-			<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			<h1 class="title">Max Dark</h1>	
-			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
-			</div>
-		</div>
-		<div class="kit">
-			<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			<h1 class="title">Max Dark</h1>	
-			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
-			</div>
-		</div>
-		<div class="kit">
-			<div class="new"><div class="mark">NOVO</div><div class="corner"></div></div>
-			<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			<h1 class="title">Max Dark</h1>	
-			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
-			</div>
-		</div>
-		<div class="kit">
-			<img src="img/max-dark.jpg" alt="ShowUIKit - Max Dark">
-			<h1 class="title">Max Dark</h1>	
-			<div class="infos">
-				<div class="info down"><i class="flaticon-download168"></i>125</div>
-				<div class="info comment"><i class="flaticon-social11"></i>4</div>
-				<div class="info like"><i class="flaticon-heart393"></i>75</div>
+				<div class="info down"><i class="flaticon-download168"></i><span ng-bind="kit.downloads"></span></div>
+				<div class="info comment"><i class="flaticon-social11"></i><span ng-bind="kit.comments"></span></div>
+				<div class="info like"><i class="flaticon-heart393"></i><span ng-bind="kit.likes"></span></div>
 			</div>
 		</div>
 
@@ -141,6 +76,7 @@
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<!--Controllers-->
+	<script type="text/javascript" src="js/api_service.js"></script>
 	<script type="text/javascript" src="js/main_controller.js"></script>
 
 </body>

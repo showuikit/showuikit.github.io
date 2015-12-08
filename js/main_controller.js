@@ -1,7 +1,8 @@
-APP.controller('MainController', function($scope){
+APP.controller('MainController', function($scope, APIService){
 	$scope.menu = "WEBAPP";
 	$scope.submenu = "TODOS";
 	$scope.showMenu = false;
+	$scope.kits = [];
 
 	$scope.openMenu = function (){
 		$scope.showMenu = !$scope.showMenu;
@@ -20,5 +21,9 @@ APP.controller('MainController', function($scope){
 		$scope.submenu = m;
 		$scope.showSubmenu = false;
 	}
+
+	APIService.getKits(function (res){
+		$scope.kits = res;
+	});
 
 });
